@@ -1,0 +1,67 @@
+{
+  "name": "wuemeli/bphmusik",
+  "timeout": 10000,
+  "connector": false,
+  "events": {
+    "functions/events/discord/bot/playback/finished.js": {
+      "name": "discord.bot.playback.finished"
+    },
+    "functions/events/autocode/self/deployed.js": {
+      "name": "autocode.self.deployed"
+    },
+    "functions/events/discord/message/create/prefix/clearqueue.js": {
+      "name": "discord.message.create.prefix",
+      "subtype": {
+        "prefix": "!clearqueue"
+      }
+    },
+    "functions/events/discord/message/create/prefix/disconnect.js": {
+      "name": "discord.message.create.prefix",
+      "subtype": {
+        "prefix": "!disconnect"
+      }
+    },
+    "functions/events/discord/message/create/prefix/enqueue.js": {
+      "name": "discord.message.create.prefix",
+      "subtype": {
+        "prefix": "!enqueue"
+      }
+    },
+    "functions/events/discord/message/create/prefix/help.js": {
+      "name": "discord.message.create.prefix",
+      "subtype": {
+        "prefix": "!help"
+      }
+    },
+    "functions/events/discord/message/create/prefix/pause.js": {
+      "name": "discord.message.create.prefix",
+      "subtype": {
+        "prefix": "!pause"
+      }
+    },
+    "functions/events/discord/message/create/prefix/play.js": {
+      "name": "discord.message.create.prefix",
+      "subtype": {
+        "prefix": "!play"
+      }
+    },
+    "functions/events/discord/message/create/prefix/queue.js": {
+      "name": "discord.message.create.prefix",
+      "subtype": {
+        "prefix": "!queue"
+      }
+    },
+    "functions/events/discord/message/create/prefix/skip.js": {
+      "name": "discord.message.create.prefix",
+      "subtype": {
+        "prefix": "!skip"
+      }
+    }
+  },
+  "env": [
+    {
+      "name": "RADIO_VOICE_CHANNEL",
+      "description": "Id of the voice channel in your server where the bot should play music"
+    }
+  ]
+}
